@@ -1,8 +1,8 @@
-streamlit==1.26.0
-validators==0.20.0
-langchain==0.104.1
-langchain_groq==0.0.5
-langchain_community==0.0.9
-unstructured==0.7.8
-openai==0.30.0
-yt-dlp==2023.09.24
+streamlit
+validators
+langchain
+langchain_groq
+langchain_community
+unstructured
+openai
+yt-dlp
