@@ -7,3 +7,4 @@ unstructured
 openai
 yt-dlp
 youtube_transcript_api
+pytube
