@@ -51,8 +51,8 @@ if st.button("✨ Summarize the Content from YT or Website"):
                     st.info("🌐 Detected a website URL. Loading webpage content...")
                     loader = UnstructuredURLLoader(
                         urls=[generic_url], 
-                        ssl_verify=False,
-                        headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"}
+                        ssl_verify=True,  # Enable SSL verification
+                        headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}  # Updated user-agent
                     )
                 
                 # Attempt to load the documents (video transcripts or webpage data)
@@ -75,4 +75,5 @@ if st.button("✨ Summarize the Content from YT or Website"):
                     st.markdown(f"### 📄 Summary:\n{output_summary['output_text']}")
                     
         except Exception as e:
-            st.exception(f"⚠️ Exception occurred: {e}")
+            # Capture detailed error and display it in the Streamlit app
+            st.exception(f"⚠️ Failed to load content: {str(e)}")
