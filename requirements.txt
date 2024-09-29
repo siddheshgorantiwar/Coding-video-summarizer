@@ -6,3 +6,4 @@ langchain_community
 unstructured
 openai
 yt-dlp
+youtube_transcript_api
